@@ -1,0 +1,27 @@
+/* From Uiverse.io by Yaseen549 */ 
+.input {
+  display: flex;
+  background-color: #121212;
+  width: auto;
+  min-width: 70%;
+  max-width: 70%;
+  
+  
+
+  height: 5%;
+  padding: 10px;
+  /* text-align: center; */
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
+
+.input:focus {
+  color: aliceblue;
+  background-color: #121212;
+  outline-color:  none;
+  box-shadow: 0px 0px 15px rgb(0, 166, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}

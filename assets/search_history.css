@@ -1,0 +1,32 @@
+.search_history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  height: 90%;
+  gap: 20px;
+}
+
+.search_history > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 44%;
+  background-color: #192347a6;
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  /* box-shadow: 7px 7px 3px rgb(0, 166, 255); */
+  /* border: solid cyan 1px; */
+}
+
+.search_history > div:nth-of-type(1) {
+  height: 6%;
+}
+
+.search_history > div:nth-of-type(2) {
+  height: 63%;
+}

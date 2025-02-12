@@ -1,0 +1,138 @@
+.weather_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  gap: 20px;
+  border-radius: 30px;
+}
+
+.weather_info > div {
+  /* border: solid cyan 1px; */
+  padding: 30px;
+  background-color: #192347a6;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  /* box-shadow: 7px 7px 3px rgb(0, 166, 255); */
+}
+
+.current {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 86%;
+  height: 6%;
+}
+
+.address {
+  
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  margin-left: 5%;
+  gap: 150px;
+  color: rgb(221, 255, 255);
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.address > div:nth-of-type(1) > div:nth-of-type(1){
+  font-size: 1.5rem;
+  color: #ffe51f;
+}
+.address > div:nth-of-type(1) > div:nth-of-type(2){
+  display: flex;
+}
+
+.address > div:nth-of-type(1) {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.address > div:nth-of-type(2) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10%;
+  color: rgb(221, 255, 255);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.cloud {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  color: rgb(221, 255, 255);
+  font-size: 1.9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.icon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  color: rgb(221, 255, 255);
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.icon > img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.location {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 86%;
+  height: 63%;
+}
+
+.date {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 5%;
+  color: rgb(221, 255, 255);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.date > div:nth-of-type(1) {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  color: #ffe51f;
+}
+
+.date > div:nth-of-type(2) {
+  font-size: 3rem;
+}
+
+.date > div:nth-of-type(3) {
+  font-size: 1.5rem;
+}
+
+.date > div:nth-of-type(4) {
+  font-size: 1.1rem;
+}
