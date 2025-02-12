@@ -53,7 +53,7 @@ search.addEventListener("click", () => {
 
 function getWeatherData(city) {
   coordinates = input.value || city;
-  url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${coordinates}`;
+  url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${coordinates}`;
   current = city
   try {
     fetch(url)
