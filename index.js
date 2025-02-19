@@ -39,7 +39,7 @@ input.addEventListener("keydown", (e) => {
     }, 500);
     e.preventDefault();
   }
-});
+});   
 
 history_list.addEventListener("click", (e) => {
   const item = e.target.closest(".city-item");
