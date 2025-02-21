@@ -86,9 +86,6 @@ function getWeatherData(city) {
         title.innerHTML = `<div class="icon">${data.current.condition.text}</div><div class="cloud">${data.current.cloud}%<img src="${data.current.condition.icon}"></div>`;
         address.innerHTML = `<div><div>${data.location.name}</div><div>${data.location.region}, ${data.location.country}</div></div><div>${convertToDMS(latitude, true)}  ${convertToDMS(longitude, false)}</div>`;
 
-        if (input.value !== "") {
-          historycheck(input.value);
-        }
         animate();
       })
       .catch((error) => {
