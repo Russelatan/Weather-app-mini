@@ -1,6 +1,6 @@
 .history_list {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 70%;
@@ -31,8 +31,9 @@
 }
 .history_list > div {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  font-size: 3rem;
   width: 100%;
   scroll-behavior: smooth;
   gap: 5px;

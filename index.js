@@ -39,7 +39,7 @@ input.addEventListener("keydown", (e) => {
     }, 500);
     e.preventDefault();
   }
-});   
+});
 
 history_list.addEventListener("click", (e) => {
   const item = e.target.closest(".city-item");
@@ -81,7 +81,8 @@ function getWeatherData(city) {
         latitude = data.location.lat;
         longitude = data.location.lon;
 
-        date.innerHTML = `<div>${day}</div><div>${fulltime}</div><div>${fulldate}</div><div>${data.location.tz_id}</div>`;
+        date.innerHTML = `<div>${day}</div><div>${fulldate}</div><div>${data.location.tz_id}</div>`;
+        history_list.innerHTML = `<div>${fulltime}</div>`; 
         title.innerHTML = `<div class="icon">${data.current.condition.text}</div><div class="cloud">${data.current.cloud}%<img src="${data.current.condition.icon}"></div>`;
         address.innerHTML = `<div><div>${data.location.name}</div><div>${data.location.region}, ${data.location.country}</div></div><div>${convertToDMS(latitude, true)}  ${convertToDMS(longitude, false)}</div>`;
 
