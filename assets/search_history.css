@@ -15,10 +15,10 @@
   flex-direction: column;
   width: 90%;
   height: 44%;
-  background-color: #192347a6;
+  background-color: #ffffff0c;
   border-radius: 10px;
   padding: 30px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px) !important;
   /* box-shadow: 7px 7px 3px rgb(0, 166, 255); */
   /* border: solid cyan 1px; */
 }
@@ -30,3 +30,90 @@
 .search_history > div:nth-of-type(2) {
   height: 63%;
 }
+
+.search_history > div:nth-of-type(2) > div {
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .search_history {
+    width: 90%; /* Increase width to take more space on smaller screens */
+    height: auto; /* Let height adjust dynamically */
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search_history > div {
+    width: 100%; /* Make full width */
+    height: auto; /* Allow content to determine height */
+    padding: 15px; /* Reduce padding */
+    border-radius: 8px;
+  }
+
+  .search_history > div:nth-of-type(1) {
+    height: auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .search_history > div:nth-of-type(2) {
+    height: auto; /* Allow it to grow */
+    max-height: 300px; /* Limit max height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling for large search history */
+  }
+
+  .search_history > div:nth-of-type(2) > div {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .search_history {
+    width: 60%; /* Adjust width for medium screens */
+    height: auto; /* Allow flexible height */
+    gap: 15px; /* Slightly increase spacing */
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .search_history > div {
+    width: 100%; /* Make each section full width */
+    height: auto; /* Adjust height dynamically */
+    padding: 20px; /* Adjust padding for readability */
+    border-radius: 10px;
+  }
+
+  .search_history > div:nth-of-type(1) {
+    height: auto;
+    font-size: 1.2rem; /* Slightly increase font size for readability */
+    text-align: center;
+  }
+
+  .search_history > div:nth-of-type(2) {
+    height: auto; /* Allow it to grow */
+    max-height: 350px; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling for large search history */
+  }
+
+  .search_history > div:nth-of-type(2) > div {
+    text-align: center;
+  }
+}
+

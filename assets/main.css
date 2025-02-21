@@ -13,7 +13,7 @@ main > div {
   z-index: 2;
 }
 
-main > img {
+main > .bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,12 +22,31 @@ main > img {
   height: 100%;
   object-fit: cover;
   backdrop-filter: brightness(90%);
+  transition: opacity 0.5s ease-in-out;
+  animation: fade 0.3s ease-in-out;
   z-index: -1;
 }
+
+.bg {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg.fade-out {
+  opacity: 0;
+}
+
 
 .transition_info {
   animation: slide_in 0.3s ease-in-out;
 }
+
+.background_fade {
+  opacity: 0;
+}
+
 
 @keyframes slide_in {
   0% {
@@ -37,5 +56,145 @@ main > img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 5px; /* Reduce spacing */
+    height: 100vh; /* Ensure full-screen coverage */
+    padding: 10px;
+  }
+
+  .bg {
+    object-fit: cover; /* Ensure the image covers the screen properly */
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  main > .bg {
+    width: 100vw; /* Ensure it takes full width */
+    height: 100vh;
+  }
+
+  .transition_info {
+    animation: slide_in_mobile 0.3s ease-in-out;
+  }
+
+  @keyframes slide_in_mobile {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Adjust spacing for medium screens */
+    height: 100vh; /* Full-screen height */
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg {
+    object-fit: cover; /* Ensure the image covers the screen */
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  main > .bg {
+    width: 100vw; /* Full width */
+    height: 100vh;
+    position: absolute; /* Keep it in the background */
+    z-index: -1;
+  }
+
+  .transition_info {
+    animation: slide_in_medium 0.3s ease-in-out;
+    text-align: center;
+  }
+
+  @keyframes slide_in_medium {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Adjusting input field for medium screens */
+  .input {
+    min-width: 80%; /* Reduce width slightly */
+    max-width: 80%;
+    height: 5%;
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .input:focus {
+    box-shadow: 0px 0px 12px rgb(0, 166, 255);
+  }
+
+  /* Adjusting history list for better display */
+  .history_list {
+    width: 85%;
+    max-height: 300px;
+    font-size: 1.2rem;
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .history_list > div {
+    gap: 5px;
+  }
+
+  .history_list img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .history_list.empty {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .empty_message {
+    font-size: 1rem;
   }
 }

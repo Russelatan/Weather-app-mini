@@ -12,7 +12,7 @@
 .weather_info > div {
   /* border: solid cyan 1px; */
   padding: 30px;
-  background-color: #192347a6;
+  background-color: #ffffff0c;
   backdrop-filter: blur(10px);
   border-radius: 10px;
   /* box-shadow: 7px 7px 3px rgb(0, 166, 255); */
@@ -135,4 +135,194 @@
 
 .date > div:nth-of-type(4) {
   font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .weather_info {
+    width: 90%;  /* Adjust width to fit smaller screens */
+    height: auto; /* Allow flexible height */
+    gap: 10px; /* Reduce spacing */
+    border-radius: 20px;
+  }
+
+  .weather_info > div {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .current {
+    width: 100%;
+    height: auto;
+    justify-content: center; /* Center content */
+  }
+
+  .address {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .address > div:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    margin-left: 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .cloud {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .icon > img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .location {
+    flex-direction: column; /* Stack items */
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .date {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .date > div:nth-of-type(1) {
+    font-size: 2rem;
+  }
+
+  .date > div:nth-of-type(2) {
+    font-size: 1.8rem;
+  }
+
+  .date > div:nth-of-type(3) {
+    font-size: 1.2rem;
+  }
+
+  .date > div:nth-of-type(4) {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .weather_info {
+    width: 70%; /* Adjust width to fit medium screens */
+    height: auto; /* Allow flexible height */
+    gap: 15px; /* Adjust spacing */
+    border-radius: 25px;
+  }
+
+  .weather_info > div {
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .current {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .address {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    gap: 15px;
+  }
+
+  .address > div:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .cloud {
+    font-size: 1.7rem;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+    justify-content: center;
+  }
+
+  .icon > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .location {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .date {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .date > div:nth-of-type(1) {
+    font-size: 2.5rem;
+  }
+
+  .date > div:nth-of-type(2) {
+    font-size: 2.2rem;
+  }
+
+  .date > div:nth-of-type(3) {
+    font-size: 1.4rem;
+  }
+
+  .date > div:nth-of-type(4) {
+    font-size: 1.2rem;
+  }
 }
