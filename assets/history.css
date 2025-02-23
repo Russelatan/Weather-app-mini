@@ -76,7 +76,7 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .history_list {
     width: 90%; /* Take more width for better visibility */
     height: auto; /* Let height adjust dynamically */

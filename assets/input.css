@@ -35,7 +35,7 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .input {
     min-width: 90%; /* Increase width for better usability on small screens */
     max-width: 90%;

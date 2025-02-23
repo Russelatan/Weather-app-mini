@@ -44,7 +44,7 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .search_history {
     width: 90%; /* Increase width to take more space on smaller screens */
     height: auto; /* Let height adjust dynamically */
