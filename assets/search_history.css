@@ -127,7 +127,7 @@
 
 @media (max-width: 800px) {
   .search_history {
-    width: 80%; /* Take more space for tablets */
+    width: 90%; /* Take more space for tablets */
     gap: 12px;
     flex-direction: column; /* Stack elements vertically */
     align-items: center;
@@ -161,7 +161,7 @@
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 1000px) {
   .search_history {
     width: 70%; /* Adjust width for medium screens */
     height: auto; /* Allow flexible height */

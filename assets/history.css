@@ -191,34 +191,6 @@
 
 
 
-/* Responsive for 800px width and 1612px height */
-@media (max-width: 800px) and (max-height: 1612px) {
-  .history_list {
-    width: 92%; /* Slightly wider for better spacing */
-    max-height: 350px; /* Increase max height */
-    font-size: 1.2rem; /* Slightly bigger font for readability */
-    padding: 14px;
-    gap: 8px;
-  }
-
-  .history_list > div {
-    gap: 6px;
-  }
-
-  .history_list > div > .city-item {
-    font-size: 1.1rem; /* Slightly bigger */
-    gap: 5px;
-  }
-
-  .history_list img {
-    width: 30px; /* Adjust icon size */
-    height: 30px;
-  }
-
-  .empty_message {
-    font-size: 1.1rem;
-  }
-}
 
 
 
@@ -228,7 +200,7 @@
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 1000px) {
   .history_list {
     width: 80%; /* Slightly increase width for better layout */
     height: auto;
