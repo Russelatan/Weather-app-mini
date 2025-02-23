@@ -180,7 +180,7 @@
 
   .search_history > div:nth-of-type(1) {
     height: auto;
-    font-size: 1.2rem; /* Slightly increase font size for readability */
+    font-size: 1.7rem; /* Slightly increase font size for readability */
     text-align: center;
   }
 
