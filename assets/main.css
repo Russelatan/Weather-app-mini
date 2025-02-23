@@ -83,7 +83,7 @@ main > .bg {
     flex-direction: column; /* Stack elements vertically */
     gap: 5px; /* Reduce spacing */
     height: 100vh; /* Ensure full-screen coverage */
-    padding: 10px;
+    /* padding: 10px; */
   }
 
   .bg {
@@ -125,7 +125,7 @@ main > .bg {
     flex-direction: column; /* Stack elements vertically */
     gap: 10px; /* Adjust spacing for medium screens */
     height: 100vh; /* Full-screen height */
-    padding: 20px;
+    /* padding: 20px; */
     justify-content: center;
     align-items: center;
   }

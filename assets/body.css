@@ -3,5 +3,6 @@ body {
   font-family: 'Segoe UI';
   user-select: none;
   background-color: black;
+  height: 100vh;
   
 }
