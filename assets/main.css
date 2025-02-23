@@ -158,22 +158,15 @@ main > .bg {
 
 
 
-/* Default styles (for larger screens) */
-main {
-  display: flex;
-  flex-direction: row; /* Default horizontal layout */
-  gap: 20px;
-  height: 100vh;
-}
 
-/* Responsive for max-width: 1200px */
+
 @media (max-width: 1200px) {
   main {
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack elements vertically */
     gap: 15px; /* Reduce spacing */
-    height: auto;
+    height: 100vh;
   }
 
   .bg {
