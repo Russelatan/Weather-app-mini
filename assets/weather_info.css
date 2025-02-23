@@ -239,6 +239,115 @@
 
 
 
+
+
+
+
+
+
+
+
+/* Responsive for 800px width and 1612px height */
+@media (max-width: 800px) and (max-height: 1612px) {
+  .weather_info {
+    width: 90%; /* Increase width for better layout */
+    gap: 15px;
+    border-radius: 25px;
+  }
+
+  .weather_info > div {
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  .current {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .address {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .address > div:nth-of-type(1) > div:nth-of-type(1){
+    font-size: 3rem;
+    color: #ffe51f;
+  }
+  .address > div:nth-of-type(1) > div:nth-of-type(2){
+    display: flex;
+  }
+  
+  .address > div:nth-of-type(1) {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    font-size: 1.7rem;
+  }
+  
+  .address > div:nth-of-type(2) {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.7rem;
+  }
+  .title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .cloud {
+    font-size: 2.3rem;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .icon > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .location {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .date {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .date > div:nth-of-type(1) {
+    font-size: 3rem;
+  }
+
+  .date > div:nth-of-type(2) {
+    font-size: 2.7rem;
+  }
+
+  .date > div:nth-of-type(3) {
+    font-size: 2rem;
+  }
+
+  .date > div:nth-of-type(4) {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+
 @media (max-width: 800px) {
   .weather_info {
     width: 85%; /* Increase width for better visibility */
@@ -323,91 +432,6 @@
 
 
 
-/* Responsive for 800px width and 1612px height */
-@media (max-width: 800px) and (max-height: 1612px) {
-  .weather_info {
-    width: 90%; /* Increase width for better layout */
-    gap: 15px;
-    border-radius: 25px;
-  }
-
-  .weather_info > div {
-    padding: 25px;
-    border-radius: 12px;
-  }
-
-  .current {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-  }
-
-  .address {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .address > div:nth-of-type(1) > div:nth-of-type(1) {
-    font-size: 1.6rem; /* Slightly bigger for readability */
-  }
-
-  .title {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .cloud {
-    font-size: 1.8rem;
-    justify-content: center;
-  }
-
-  .icon {
-    font-size: 1.5rem;
-    justify-content: center;
-  }
-
-  .icon > img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .location {
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .date {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .date > div:nth-of-type(1) {
-    font-size: 2.5rem;
-  }
-
-  .date > div:nth-of-type(2) {
-    font-size: 2.2rem;
-  }
-
-  .date > div:nth-of-type(3) {
-    font-size: 1.5rem;
-  }
-
-  .date > div:nth-of-type(4) {
-    font-size: 1.3rem;
-  }
-}
-
-
-
-
-
-
-
 
 @media (max-width: 1200px) {
   .weather_info {
@@ -437,22 +461,22 @@
   }
 
   .address > div:nth-of-type(1) > div:nth-of-type(1) {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 
   .title {
     margin-left: 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   .cloud {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     justify-content: center;
   }
 
   .icon {
-    font-size: 1.4rem;
+    font-size: 2rem;
     justify-content: center;
   }
 
@@ -475,18 +499,18 @@
   }
 
   .date > div:nth-of-type(1) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .date > div:nth-of-type(2) {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
   }
 
   .date > div:nth-of-type(3) {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .date > div:nth-of-type(4) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
