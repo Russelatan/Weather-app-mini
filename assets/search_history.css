@@ -136,7 +136,7 @@
   .search_history > div {
     width: 100%;
     height: auto;
-    padding: 18px; /* Slightly larger padding */
+    padding: 12px; /* Slightly larger padding */
     border-radius: 10px;
   }
 
