@@ -35,7 +35,7 @@
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .input {
     min-width: 90%; /* Increase width for better usability on small screens */
     max-width: 90%;
@@ -50,6 +50,19 @@
 }
 
 
+
+
+
+
+@media (max-width: 800px) {
+  .input {
+    min-width: 85%; /* Increase width for better usability */
+    max-width: 85%;
+    height: 48px; /* Adjust height for touch-friendly design */
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
 
 
 

@@ -153,7 +153,7 @@
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .weather_info {
     width: 90%;  /* Adjust width to fit smaller screens */
     height: auto; /* Allow flexible height */
@@ -238,6 +238,84 @@
 
 
 
+
+@media (max-width: 800px) {
+  .weather_info {
+    width: 85%; /* Increase width for better visibility */
+    gap: 12px;
+    border-radius: 20px;
+  }
+
+  .weather_info > div {
+    padding: 22px;
+    border-radius: 10px;
+  }
+
+  .current {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .address {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .address > div:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .cloud {
+    font-size: 1.6rem;
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+
+  .icon > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .location {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .date {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .date > div:nth-of-type(1) {
+    font-size: 2.2rem;
+  }
+
+  .date > div:nth-of-type(2) {
+    font-size: 1.9rem;
+  }
+
+  .date > div:nth-of-type(3) {
+    font-size: 1.3rem;
+  }
+
+  .date > div:nth-of-type(4) {
+    font-size: 1.1rem;
+  }
+}
 
 
 

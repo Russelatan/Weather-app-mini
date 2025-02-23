@@ -78,7 +78,7 @@ main > .bg {
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   main {
     flex-direction: column; /* Stack elements vertically */
     gap: 5px; /* Reduce spacing */
@@ -113,6 +113,43 @@ main > .bg {
 }
 
 
+
+
+
+
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Reduce spacing */
+    height: 100vh;
+  }
+
+  .bg {
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  main > .bg {
+    width: 100vw;
+    height: 80vh; /* Adjust height to fit content */
+  }
+
+  .transition_info {
+    animation: slide_in_tablet 0.4s ease-in-out;
+  }
+
+  @keyframes slide_in_tablet {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 
 
 

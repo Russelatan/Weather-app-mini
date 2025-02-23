@@ -44,7 +44,7 @@
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .search_history {
     width: 90%; /* Increase width to take more space on smaller screens */
     height: auto; /* Let height adjust dynamically */
@@ -74,6 +74,39 @@
 
   .search_history > div:nth-of-type(2) > div {
     text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .search_history {
+    width: 80%; /* Take more space for tablets */
+    gap: 12px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .search_history > div {
+    width: 100%;
+    height: auto;
+    padding: 18px; /* Slightly larger padding */
+    border-radius: 10px;
+  }
+
+  .search_history > div:nth-of-type(1) {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .search_history > div:nth-of-type(2) {
+    max-height: 350px; /* Allow more content visibility */
+    overflow-y: auto;
   }
 }
 
