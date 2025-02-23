@@ -78,7 +78,7 @@ main > .bg {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   main {
     flex-direction: column; /* Stack elements vertically */
     gap: 5px; /* Reduce spacing */
@@ -120,81 +120,4 @@ main > .bg {
 
 
 
-@media (max-width: 1200px) {
-  main {
-    flex-direction: column; /* Stack elements vertically */
-    gap: 10px; /* Adjust spacing for medium screens */
-    height: 100vh; /* Full-screen height */
-    /* padding: 20px; */
-    justify-content: center;
-    align-items: center;
-  }
 
-  .bg {
-    object-fit: cover; /* Ensure the image covers the screen */
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  main > .bg {
-    width: 100vw; /* Full width */
-    height: 100vh;
-    position: absolute; /* Keep it in the background */
-    z-index: -1;
-  }
-
-  .transition_info {
-    animation: slide_in_medium 0.3s ease-in-out;
-    text-align: center;
-  }
-
-  @keyframes slide_in_medium {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Adjusting input field for medium screens */
-  .input {
-    min-width: 80%; /* Reduce width slightly */
-    max-width: 80%;
-    height: 5%;
-    font-size: 1.2rem;
-    padding: 12px;
-  }
-
-  .input:focus {
-    box-shadow: 0px 0px 12px rgb(0, 166, 255);
-  }
-
-  /* Adjusting history list for better display */
-  .history_list {
-    width: 85%;
-    max-height: 300px;
-    font-size: 1.2rem;
-    padding: 15px;
-    gap: 8px;
-  }
-
-  .history_list > div {
-    gap: 5px;
-  }
-
-  .history_list img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .history_list.empty {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-
-  .empty_message {
-    font-size: 1rem;
-  }
-}
