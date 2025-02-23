@@ -47,6 +47,11 @@ input.addEventListener("keydown", (e) => {
   }
 });   
 
+input.addEventListener("blur", function() {
+  document.body.style.zoom = "100%"; // Reset zoom after input
+});
+
+
 history_list.addEventListener("click", (e) => {
   const item = e.target.closest(".city-item");
   if (!item) return;
