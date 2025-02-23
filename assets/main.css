@@ -126,13 +126,13 @@ main > .bg {
   }
 
   .bg {
-    object-fit: cover;
+    object-fit: fill;
     transition: opacity 0.5s ease-in-out;
   }
 
   main > .bg {
     width: 100vw;
-    height: 80vh; /* Adjust height to fit content */
+    height: 100vh; /* Adjust height to fit content */
   }
 
   .transition_info {
