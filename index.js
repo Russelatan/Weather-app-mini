@@ -258,31 +258,51 @@ function updateBackground(conditionText) {
   }
 }
 
-
-if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      const { latitude, longitude } = position.coords;
-      console.log("Latitude:", latitude);
-      console.log("Longitude:", longitude);
-      current_latitude = latitude;
-      current_longitude = longitude;
-      getWeatherData(`${current_latitude},${current_longitude}`);
-      if (search_history.length === 0) {
-        const empty_history = document.createElement('div');
-        empty_history.classList.add("empty_message");
-        empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
-        history_list.appendChild(empty_history);
-        history_list.classList.toggle("empty");
+function getLocation() {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        current_latitude = latitude;
+        current_longitude = longitude;
+        getWeatherData(`${current_latitude},${current_longitude}`); 
+        if (search_history.length === 0) {
+          const empty_history = document.createElement('div');
+          empty_history.classList.add("empty_message");
+          empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
+          history_list.appendChild(empty_history);
+          history_list.classList.toggle("empty");
+        }
+        
+      },
+      (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("Location access denied. Please enable location services.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("Location request timed out. Try again.");
+            break;
+          default:
+            alert("An unknown error occurred.");
+        }
+      },
+      {
+        enableHighAccuracy: true, // More accurate on mobile
+        timeout: 10000, // Wait up to 10 seconds
+        maximumAge: 0, // Avoid cached locations
       }
-    },
-    (error) => {
-      console.error("Error getting location:", error.message);
-    }
-  );
-} else {
-  console.log("Geolocation is not supported by this browser.");
+    );
+  } else {
+    alert("Geolocation is not supported by your browser.");
+  }
 }
+
+getLocation()
 
 
 
