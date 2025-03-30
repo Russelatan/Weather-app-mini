@@ -266,13 +266,39 @@ function getLocation() {
         console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
         current_latitude = latitude;
         current_longitude = longitude;
-        getWeatherData(`${current_latitude},${current_longitude}`); 
-        if (search_history.length === 0) {
-          const empty_history = document.createElement('div');
-          empty_history.classList.add("empty_message");
-          empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
-          history_list.appendChild(empty_history);
-          history_list.classList.toggle("empty");
+        try {
+          getWeatherData(`${current_latitude},${current_longitude}`); 
+          if (search_history.length === 0) {
+            const empty_history = document.createElement('div');
+            empty_history.classList.add("empty_message");
+            empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
+            history_list.appendChild(empty_history);
+            history_list.classList.toggle("empty");
+          }
+        }
+        catch(e){
+
+          
+          document.querySelector(".main").innerHTML = `
+                                                        <div class="bg" alt=""></div>
+                                                        <div class="weather_info">
+                                                          <div class="current">
+                                                            <div class="address"></div>
+                                                          </div>
+                                                          <div class="location">
+                                                            <div class="date"></div>
+                                                            <div class="title"></div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="search_history">
+                                                          <div class="search" for="input">
+                                                            <input placeholder="e.g (Latitude, Longitude)" class="input" name="text" type="text">
+                                                          </div>
+                                                          <div class="history">
+                                                            <div class="history_list"></div>
+                                                          </div>
+                                                        </div>
+                                                      `;
         }
         
       },
