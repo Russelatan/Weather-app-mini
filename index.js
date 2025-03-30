@@ -4,6 +4,8 @@ let formattedDate;
 let fulldate;
 let fulltime;
 let day;
+let current_latitude;
+let current_longitude;
 let latitude;
 let longitude;
 let current;
@@ -257,6 +259,30 @@ function updateBackground(conditionText) {
 }
 
 
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+      console.log("Latitude:", latitude);
+      console.log("Longitude:", longitude);
+      current_latitude = latitude;
+      current_longitude = longitude;
+      getWeatherData(`${current_latitude},${current_longitude}`);
+      if (search_history.length === 0) {
+        const empty_history = document.createElement('div');
+        empty_history.classList.add("empty_message");
+        empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
+        history_list.appendChild(empty_history);
+        history_list.classList.toggle("empty");
+      }
+    },
+    (error) => {
+      console.error("Error getting location:", error.message);
+    }
+  );
+} else {
+  console.log("Geolocation is not supported by this browser.");
+}
 
 
 
@@ -265,12 +291,5 @@ function updateBackground(conditionText) {
 
 preloadImages(imagesToPreload);
 
-getWeatherData("ormoc");
-if (search_history.length === 0) {
-  const empty_history = document.createElement('div');
-  empty_history.classList.add("empty_message");
-  empty_history.innerHTML = `<div class="empty_message">History is empty</div>`;
-  history_list.appendChild(empty_history);
-  history_list.classList.toggle("empty");
-}
+
 
